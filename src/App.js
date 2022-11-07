@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import useAxios from 'axios-hooks'
+import { useEffect } from 'react';
 import './App.css';
+import { Loading } from './components/Loading/Loading.component';
+import { Success } from './components/Success/Success.component';
+import { Error } from './components/Error/Error.component';
 
 function App() {
+
+  const [{ data, loading, error }, refetch] = useAxios(
+    'http://undefinedvariable.ddns.net:8888'
+  )
+
+  useEffect(() => {
+    refetch()
+  }, [])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {loading && <Loading />}
+      {data && <Success />}
+      {error && <Error />}
     </div>
   );
 }
