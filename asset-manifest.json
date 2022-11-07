@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/lighter/static/css/main.48cea9bb.css",
+    "main.js": "/lighter/static/js/main.1711f2ee.js",
+    "index.html": "/lighter/index.html",
+    "main.48cea9bb.css.map": "/lighter/static/css/main.48cea9bb.css.map",
+    "main.1711f2ee.js.map": "/lighter/static/js/main.1711f2ee.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.48cea9bb.css",
+    "static/js/main.1711f2ee.js"
+  ]
+}
